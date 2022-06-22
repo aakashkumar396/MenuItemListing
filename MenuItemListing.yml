@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: MenuItemListing-deployment
+  labels:
+    app: MenuItemListing
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: MenuItemListing
+  template:
+    metadata:
+      labels:
+        app: MenuItemListing
+    spec:
+      containers:
+      - name: MenuItemListing
+        image: localhost:9000/mvcdockerdemo:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
