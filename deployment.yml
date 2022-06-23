@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: menuitemlisting
-        image: cloudregistry236.azurecr.io/cloudpracticerepo:latest
+        image: cloud236registry.azurecr.io/cloud236repo:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
