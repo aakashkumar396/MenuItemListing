@@ -1,14 +1,14 @@
-apiVersion: apps/v1
+﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: menuitemlisting
   labels:
     app: menuitemlisting
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: menuitemlisting
+      app: menuitemlisting  
   template:
     metadata:
       labels:
@@ -16,13 +16,11 @@ spec:
     spec:
       containers:
       - name: menuitemlisting
-        image: cloudregistry236.azurecr.io/cloudpracticerepo:latest
-        imagePullPolicy: IfNotPresent
+        image: cloudpracticeregistry.azurecr.io/menuitemlistrepo:latest
         ports:
-        - containerPort: 80
-        imagePullSecrets:
+        - containerPort: 8080
+      imagePullSecrets:
       - name: myacrcredentails
-
 ---
 apiVersion: v1
 kind: Service
