@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: MenuItemListing
-        image: docker pull cloudpracticeregistry.azurecr.io/menuitemlistrepo:latest
+        image: docker pull cloudregistry236.azurecr.io/cloudpracticerepo:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
